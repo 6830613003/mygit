@@ -1,0 +1,67 @@
+*
+{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+}
+h1
+{
+   font-size: clamp(1.5rem,2.5vw,3.5rem);
+   padding: 0.5em;
+   color: blue;
+   position: relative;
+   animation-name: test;
+   animation-duration: 0s;
+   animation-direction: alternate-reverse;
+   animation-timing-function: infinite;
+}
+main
+{
+   display: grid; 
+   grid-template-columns: repeat(auto-fill, minmax(14em,1fr));
+}
+.card
+{
+   margin: 1em;
+   width: 14em;
+   border: 2px solid rgb(145, 135, 124);
+   border-radius: 5px;
+   overflow: hidden;
+   transition: width 2s, height 4s, background-color 5s;
+}
+.card img
+{
+   width: 100%;
+}
+.card h2
+{
+   padding: 0 4em;
+}
+.card:hover
+{
+   box-shadow: 4px 4px 4px rgb(211, 138, 1);
+   rotate: 540deg;
+   scale: 2;
+   width: 15em;
+   background-color: blue;
+}
+body
+{
+   background: linear-gradient(to right, black,blue);
+}
+@keyframes test
+{  
+   0%
+   {
+      rotate: -30deg;
+   }
+   50%
+   {
+      rotate: -89deg;
+   }
+
+   100%
+   {
+      rotate: -360deg;
+   }
+}
